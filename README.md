@@ -1,16 +1,21 @@
 # Datastructures_Algorithms
 My practice of DS and Algorithms using Python
 This includes
-DS
--> Arrays
+Buit in python data structures like
+-> Lists
+-> tuples
+-> sets
+-> dictionaries
+And other data types like, 
+-> Strings
+Customized data structures like,
 -> Stacks
 -> LinkedLists
 -> Queues
 -> Binary Tree
 -> Binary Search Tree
--> Heaps
+-> Maxheap
 -> Hashing
 -> Graphs
 -> Matrix
--> Strings
 And some coding challenges/ algorithms.
