@@ -1,0 +1,27 @@
+Binary Search Tree:
+
+-> Each node can have up to two child nodes.
+-> In BST, each node is greater than every node in its left subtree.
+-> Also, each node is less than every node in its right subtree.
+
+						15
+			
+				8				24
+			
+			5		11		19			28
+		
+		2		6		13			25
+		
+-> 15 is greater than 8,5,11,2,6,13 (all nodes in left subtree)
+-> 15 is less than 24,19,28,25 (all nodes in right subtree)
+
+Operations of BST:
+-> Insert
+-> Find 
+-> Delete
+-> get_size
+-> Traversal
+
+1) Insert
+
+ i)
