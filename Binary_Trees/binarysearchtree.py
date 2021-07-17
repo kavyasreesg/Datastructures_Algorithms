@@ -75,8 +75,26 @@ class BinarySearchTree:
     def calculate_sum(self):
         left_sum = self.left.calculate_sum() if self.left else 0
         right_sum = self.right.calculate_sum() if self.right else 0
-        return left_sum+self.data+right_sum
+        return left_sum + self.data + right_sum
 
+    def delete(self, val):
+        if val < self.data:
+            if self.left:
+                self.left = self.left.delete(val)
+        if val > self.data:
+            if self.right:
+                self.right = self.right.delete(val)
+        else:
+            if self.left is None and self.right is None:
+                return None
+            if self.left is None:
+                return self.right
+            if self.right is None:
+                return self.left
+            min_val = self.right.find_min()
+            self.data = min_val
+            self.right = self.right.delete(min_val)
+        return self
 
 
 def build_tree(elements):
@@ -88,7 +106,7 @@ def build_tree(elements):
 
 if __name__ == '__main__':
     # You can also use strings in list
-    list_of_inputs = [15, 12, 14, 7, 20, 27, 88, 23, 15]
+    list_of_inputs = [15, 12, 14, 7, 20, 27, 88, 23]
     node = build_tree(list_of_inputs)
     print(node.inorder_traversal())
     print(node.pre_order_traversal())
@@ -98,3 +116,5 @@ if __name__ == '__main__':
     minimum, maximum = node.find_min(), node.find_max()
     print("Minimum is {} and Maximum is {}".format(minimum, maximum))
     print("Sum of nodes in a tree {} ".format(node.calculate_sum()))
+    node.delete(12)
+    print(node.inorder_traversal())
