@@ -1,8 +1,8 @@
-"""
-Perform DFS and try to append the nodes once it's
-adjacent nodes are completely visited
-Time complexity is O(V+E)
-Space is O(V)
+"""Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed
+edge u v, vertex u comes before v in the ordering. Topological Sorting for a graph is not possible if the graph is
+not a DAG.
+Perform DFS and try to append the nodes once it's adjacent nodes are completely visited.4
+Time complexity is O(V+E) Space is O(V) Graph should be Cyclic
 """
 adj_list = {
     "0": [],
