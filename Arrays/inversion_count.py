@@ -1,7 +1,7 @@
 """
 if array[i] > array[j] and i < j then inversion count increments
 This can be made possible by merge sort while merging
-Time complexity is O(nlogn) and space complexity is O(1)
+Time complexity is O(nlogn) and space complexity is O(n)
 """
 
 
